@@ -265,6 +265,12 @@ section {
     margin-top: 0rem;
     font-family: 'Poppins', sans-serif;
 }
+.ctntext{
+  text-align: center;
+    font-size: 4rem;
+    margin-top: 0rem;
+    font-family: 'Poppins', sans-serif;
+}
 /* SOBRE */
 .sobre ul {
   margin-top: 16px;
@@ -318,7 +324,45 @@ section {
   display: flex;
   gap: 24px;
   list-style: none;
+  justify-content: center;
+  padding: 0;
 }
+
+.ctn {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.ctn li {
+  background: var(--bg-card);
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(56,189,248,0.08);
+  margin: 0 4px;
+}
+.ctn li:hover {
+  background: var(--primary);
+  border-color: #0ea5e9;
+  transform: translateY(-2px) scale(1.04);
+}
+.ctn a {
+  display: block;
+  color: var(--primary);
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.ctn li:hover a {
+  color: #020617;
+}
+
 
 /* FOOTER */
 footer {
@@ -366,6 +410,13 @@ footer {
     display: block;
     margin-top: 1rem;
   }
+  .ctn {
+    gap: 12px;
+  }
+  .ctn a {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -378,7 +429,7 @@ footer {
   .subtitulo {
     font-size: 1rem;
   }
-  .techtitulo, .Sobremim, .Nome {
+  .techtitulo, .Sobremim, .Nome, .ctntext {
     font-size: 1.5rem;
     margin-top: 1rem;
     margin-left: 0;
@@ -417,6 +468,19 @@ footer {
     flex-direction: column;
     gap: 10px;
     align-items: center;
+  }
+  .ctn {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  .ctn a {
+    width: 90vw;
+    max-width: 400px;
+    min-width: 220px;
+    text-align: center;
+    padding: 14px 0;
+    font-size: 1.08rem;
   }
 }
 }
