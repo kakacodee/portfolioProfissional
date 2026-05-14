@@ -139,7 +139,6 @@ section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 16px;
 }
 
@@ -182,7 +181,7 @@ section {
 }
 
 .projb {
-    margin-left: 17rem;
+    margin-left: 25rem;
     width: 20rem;
     text-align: center;
   background: var(--primary);
@@ -196,7 +195,7 @@ section {
 .contb {
     width: 20rem;
     text-align: center;
-    margin-left: 40rem;
+    margin-left: 50rem;
     margin-top: -4rem;
   border: 1px solid var(--primary);
   color: var(--primary);
@@ -445,8 +444,8 @@ footer {
     width: 40px;
   }
   .projb, .contb {
-    width: 100%;
-    margin-left: 0;
+    width: 300px;
+    margin-left: 8rem;
     margin-top: 1rem;
     padding: 10px 0;
     font-size: 1rem;
