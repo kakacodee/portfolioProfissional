@@ -372,36 +372,10 @@ footer {
 }
 
 /* RESPONSIVIDADE */
-@media (max-width: 1200px) {
-  .projb {
-    margin-left: 5rem;
-    width: 16rem;
-  }
-  .contb {
-    margin-left: 22rem;
-    width: 16rem;
-  }
-  .techtitulo {
-    margin-left: 0;
-  }
-  .cards {
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 900px) {
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
   .titulo {
     font-size: 4rem;
-  }
-  .techtitulo {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    margin-left: 0;
-  }
-  .cards {
-    margin-left: 0;
-    margin-top: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
   .projb, .contb {
     margin-left: 0;
@@ -409,77 +383,121 @@ footer {
     display: block;
     margin-top: 1rem;
   }
-  .ctn {
-    gap: 12px;
+  .techtitulo {
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    text-align: center;
   }
-  .ctn a {
-    padding: 10px 16px;
-    font-size: 1rem;
+  .cards {
+    margin-left: 0;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
 }
 
-@media (max-width: 600px) {
-  section {
-    padding: 64px 4%;
-  }
+/* Responsividade para celulares */
+@media (max-width: 768px) {
   .titulo {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   .subtitulo {
     font-size: 1rem;
   }
-  .techtitulo, .Sobremim, .Nome, .ctntext {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    margin-left: 0;
+  .slide video {
+    height: auto;
+    max-height: 40vh;
+  }
+  section {
+    padding: 48px 5%;
+  }
+  .projb, .contb {
+    width: 100%;
+    margin: 0.5rem 0;
   }
   .cards {
     grid-template-columns: 1fr;
     gap: 12px;
-    margin-top: 1rem;
-    margin-left: 0;
   }
   .card img {
-    margin-left: 0;
-    width: 40px;
-  }
-  .projb, .contb {
-    width: 300px;
-    margin-left: 8rem;
-    margin-top: 1rem;
-    padding: 10px 0;
-    font-size: 1rem;
-  }
-  .slide video {
-    height: 40vw;
-    min-height: 180px;
-    max-height: 40vh;
-  }
-  .slide-btn {
-    font-size: 1.2rem;
-    padding: 0.3rem 0.7rem;
-  }
-  .itensli {
-    padding: 10px 8px;
-    font-size: 0.95rem;
-  }
-  .Contato ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-  .ctn {
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
-  }
-  .ctn a {
-    width: 90vw;
-    max-width: 400px;
-    min-width: 220px;
-    text-align: center;
-    padding: 14px 0;
-    font-size: 1.08rem;
+    margin: 0 auto;
   }
 }
+/* Responsividade para celulares pequenos (até 500px) */
+@media (max-width: 500px) {
+ .home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 14rem; /* espaço para o menu fixo */
+}
+
+.titulo {
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.subtitulo {
+  margin-top: -1rem;
+  font-size: 1.5rem;
+  color: var(--muted);
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+  .home p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .projb, .contb {
+    width: 100%;
+    margin: 0.5rem 0;
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .techtitulo,
+  .Sobremim,
+  .Nome,
+  .ctntext {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .cards {
+    margin: 0;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .cardtitle {
+    font-size: 1rem;
+  }
+
+  .slide video {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+  }
+
+  section {
+    padding: 32px 5%;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .menu a {
+    font-size: 0.9rem;
+  }
 }
