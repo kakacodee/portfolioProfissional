@@ -423,30 +423,41 @@ footer {
 }
 /* Responsividade para celulares pequenos (até 500px) */
 @media (max-width: 500px) {
- .home {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 14rem; /* espaço para o menu fixo */
-}
+  /* regra global para evitar overflow horizontal */
+  body, html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
 
-.titulo {
-  font-size: 3rem;
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-}
+  .home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 14rem; /* espaço para o menu fixo */
+    padding: 0 1rem;   /* respiro lateral */
+  }
 
-.subtitulo {
-  margin-top: -1rem;
-  font-size: 1.5rem;
-  color: var(--muted);
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
+  .titulo {
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .subtitulo {
+    margin-top: -1rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
   .home p {
     font-size: 0.9rem;
     margin-top: 0.5rem;
+    text-align: center;
   }
 
   .projb, .contb {
@@ -479,6 +490,7 @@ footer {
 
   .cardtitle {
     font-size: 1rem;
+    text-align: center;
   }
 
   .slide video {
@@ -488,7 +500,7 @@ footer {
   }
 
   section {
-    padding: 32px 5%;
+    padding: 32px 0;
   }
 
   .menu {
@@ -499,5 +511,6 @@ footer {
 
   .menu a {
     font-size: 0.9rem;
+    text-align: center;
   }
 }
